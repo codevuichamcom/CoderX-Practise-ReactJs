@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+    background-color: #ccc;
+    height: 1000px;
+
+}
+
+.modal {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    background-color: white;
+    padding: 20px;
+}
+
+.modal .modal-header {
+    position: relative;
+    display: flex;
+}
+
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal .modal-header .title {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer .btn {
+    margin: 0 0.25rem;
+}
+
+.btn button {
+    background-color: #ccc;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.25rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn-green button {
+    background-color: #28A745;
+}
+
+.btn-red button {
+    background-color: #D63447;
+}
