@@ -29,7 +29,7 @@ const NavBar = (props) => {
                         </NavItem>
                         <NavItem>
                             <CartContext.Consumer>
-                                {({ cartItems }) => <Link to="/products">Cart ({cartItems.length})</Link>}
+                                {({ cartItems }) => <Link to="/carts">Cart ({cartItems.length})</Link>}
                             </CartContext.Consumer>
                         </NavItem>
                     </Nav>

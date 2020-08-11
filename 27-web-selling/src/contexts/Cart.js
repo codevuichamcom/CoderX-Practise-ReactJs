@@ -10,8 +10,12 @@ export class CartProvider extends Component {
             cartItems: []
         }
     }
-    addToCart = (product) => {
-        this.setState({ cartItems: this.state.cartItems.concat(product) });
+    componentDidMount() {
+        this.setState({ cartItems: JSON.parse(localStorage.getItem('cartItems')) || [] });
+    }
+    addToCart = async (product) => {
+        await this.setState({ cartItems: this.state.cartItems.concat(product) });
+        localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
     }
     render() {
         return (

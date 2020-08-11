@@ -9,6 +9,7 @@ import NavBar from './components/NavBar';
 import Products from "./pages/Products";
 
 import { CartProvider } from './contexts/Cart'
+import Carts from "./pages/Carts";
 
 export default function App() {
   return (
@@ -19,9 +20,13 @@ export default function App() {
           <Route path="/products">
             <Products />
           </Route>
+          <Route exact path="/carts">
+            <Carts />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
       </Router>
     </CartProvider>
