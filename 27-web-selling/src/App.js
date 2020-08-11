@@ -8,19 +8,23 @@ import {
 import NavBar from './components/NavBar';
 import Products from "./pages/Products";
 
+import { CartProvider } from './contexts/Cart'
+
 export default function App() {
   return (
-    <Router>
+    <CartProvider>
+      <Router>
         <NavBar />
         <Switch>
           <Route path="/products">
-            <Products/>
+            <Products />
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </CartProvider>
   );
 }
 
